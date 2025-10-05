@@ -3,3 +3,5 @@ I created an example of how a couple pages of it could look like. The basic fram
 <br>Verse contents (devnagri and translit.)
 <br>Verse translation
 <br>Nav buttons on the sidebar to go back/forward by one verse.
+</p><br>
+To preview the site, clone this or download the source and run live server from the source directory. Email me at shivumnganesh@gmail.com for feedback.
