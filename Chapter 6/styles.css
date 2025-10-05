@@ -1,0 +1,152 @@
+/* 1. Style the Logo to your desired size (from the previous answer) */
+* {
+    box-sizing: border-box;
+}
+
+.small-logo {
+    width: 150px; /* Example size */
+    height: auto;
+}
+.tiny-logo {
+    width: 100px; /* Example size */
+    height: auto;
+}
+
+/* 2. Use Flexbox on the container to put items on one line */
+.header-content {
+    /* Puts the children (img and span) side-by-side */
+    display: flex; 
+    justify-content: space-between;
+    /* Vertically centers the items (logo and text) relative to each other */
+    align-items: center; 
+    
+    /* Add some spacing between the items */
+    gap: 15px; 
+    
+    /* Optional: Add padding to the header for better appearance */
+    padding: 1% 1%;
+    
+    /* Optional: Give the header a background color */
+    background-color: #d6997b; 
+}
+
+.header-left-group {
+    /* Treat the logo and text as a separate row inside the header */
+    display: flex; 
+    align-items: center;
+    gap: 15px; /* Space between the logo and the text */
+}
+
+
+/* Optional: Style the text to look nicer next to the logo */
+.header-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* This line prevents the text from wrapping if you have a lot of it */
+    white-space: nowrap; 
+}
+
+.chapter-heading {
+    /* The Box */
+    background-color: #790f0f; /* Deep Navy Blue/Indigo */
+    padding: 10px 15px;      /* Vertical padding (top/bottom) and Horizontal padding (left/right) */
+    text-align: center;      /* Centers the text inside the box */
+    
+    /* The Text Style */
+    color: #ffffff;          /* Light Orange/Gold color */
+    font-family: 'Times New Roman', Times, serif; /* Use an elegant serif font */
+    font-size: 28px;         /* Adjust text size as needed */
+    font-weight: normal;     /* Avoids making the text too bold */
+    
+    /* Optional: Centering the box itself on the page */
+    max-width: 1000px;        /* Limits the width of the box */
+    margin: 20px auto;       /* Adds margin above/below and centers it horizontally */
+}
+
+.other-heading {
+    /* The Box */
+    background-color: #ddd0d0; /* Deep Navy Blue/Indigo */
+    padding: 10px 15px;      /* Vertical padding (top/bottom) and Horizontal padding (left/right) */
+    text-align: center;      /* Centers the text inside the box */
+    
+    /* The Text Style */
+    color: #790f0f;          /* Light Orange/Gold color */
+    font-family: 'Times New Roman', Times, serif; /* Use an elegant serif font */
+    font-size: 28px;         /* Adjust text size as needed */
+    font-weight: normal;     /* Avoids making the text too bold */
+    
+    /* Optional: Centering the box itself on the page */
+    max-width: 1000px;        /* Limits the width of the box */
+    margin: 20px auto;       /* Adds margin above/below and centers it horizontally */
+}
+
+.verse-container {
+    /* This is the key property for centering text and other inline elements */
+    text-align: center; 
+    
+    /* Optional: Limit the width of the container so it doesn't span the entire page */
+    max-width: 1000px;
+    
+    /* Optional: Center the entire container block horizontally on the page */
+    margin: 20px auto; 
+    
+    /* Add any other styling for readability */
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Optional: Add spacing between the Sanskrit and Transliteration blocks */
+.sanskrit {
+    margin-bottom: 20px; /* Adds space below the Sanskrit lines */
+}
+
+/* 1. Set up the Wrapper and Margins */
+.main-content-wrapper {
+    /* Enables Flexbox layout for the two children (columns) */
+    display: flex; 
+    
+    /* Optional: Small margins on the left and right of the page */
+    margin: 0 1%; 
+    
+    /* Ensures the wrapper uses the full width available between the margins */
+    width: 98%; /* 100% minus 1% on each side */
+    
+    /* FIX 1: Added missing semicolon after 'gap: 10px' on Ln 103 */
+    gap: 10px; 
+    
+    box-sizing: border-box; 
+    /* FIX 2: Removed an extra '}' that was here (Ln 104, Col 1 error was caused by the missing semicolon on 103) */
+}
+
+/* 2. Style the Columns for 80-20 Split */
+.main-column {
+    
+    flex: 8; 
+    /* The flex: 0 0 80% is shorthand for: */
+    /* flex-grow: 0; (don't grow) */
+    /* flex-shrink: 0; (don't shrink) */
+    /* flex-basis: 80%; (start at 80% of the wrapper's width) */
+    background-color: #e9baf1;
+    padding-right: 10px; /* Add some space between the main content and the sidebar */
+    padding-left: 10px;
+    padding-top: 10px;
+    
+    /* FIX 3: Corrected value from '10x' to '10px' and added missing semicolon after the value on Ln 127 */
+    padding-bottom: 10px; 
+    
+}
+
+.sidebar {
+    /* Takes up the remaining 20% of the wrapper's width */
+    flex: 2; 
+    min-width: 150px; /* FIX 4: Added missing semicolon after 'min-width: 150px' on Ln 128 */
+    
+    /* Optional: Add a subtle background to the sidebar for distinction */
+    background-color: #f1ebde;
+    padding-left: 20px; /* Added missing semicolon */
+    padding-right: 20px; /* Added missing semicolon */
+
+} /* The rule is correctly closed here */
+
+/* There was an extra closing brace '}' at the very end of the file in the original content which is now removed */
